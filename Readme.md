@@ -2,11 +2,11 @@ Video Surveillance Kata in Typescript
 
 # Enunciado:
 
- un conocido fabricante de sistemas de video vigilancia nos ha solicitado el desarrollo de un software para el prototipo de un nuevo producto innovador que están desarrollando. Se trata de un equipo que dispone de un sensor de movimiento y de un grabador. El sensor de movimiento tiene una API con un solo método que devuelve verdadero cuando detecta que algo ha empezado a moverse y falso cuando no detecta movimiento. Por otro lado, el grabador dispone de dos comandos: uno para empezar a grabar y otro para detener la grabación.
+ a well-known manufacturer of video surveillance systems has asked us to develop software for the prototype of a new innovative product they are developing. It is a device that has a motion sensor and a recorder. The motion sensor has an API with a single method that returns true when it detects that something has started to move and false when it detects no movement. On the other hand, the recorder has two commands: one to start recording and one to stop recording.
 
-Nuestra tarea será diseñar un controlador que compruebe cada segundo si el sensor está detectando movimiento y si es así le debemos indicar al grabador que inicie la grabación, y en caso contrario, debe detenerla. La grabación también debería detenerse en caso de algún comportamiento inesperado del sensor.
+Our task will be to design a controller that checks every second if the sensor is detecting movement and if so, we should tell the recorder to start recording, and if not, it should stop recording. Recording should also stop in case of unexpected sensor behaviour.
 
-La principal limitación es que el fabricante no nos ofrece la posibilidad de acceder ni al código del sensor ni del grabador, parece que no quiere que le copiemos su magnífica idea. Pero al menos nos provee de sus interfaces públicas:
+The main limitation is that the manufacturer does not offer us the possibility to access neither the code of the sensor nor the recorder, it seems that he does not want us to copy his magnificent idea. But at least they provide us with their public interfaces:
 
 ```ts
 interface MotionSensor {
@@ -19,11 +19,11 @@ interface VideoRecorder {
 }
 ```
 
-Requisitos
+Requirements
 
-En resumen, los requisitos que debe cumplir el controlador que tenemos que diseñar son:
+In summary, the requirements to be met by the controller we have to design are:
 
-- Indica al grabador que detenga la grabación cuando el sensor no detecta movimiento.
-- Indica al grabador que comience la grabación cuando el sensor detecta movimiento.
-- Indica al grabador que detenga la grabación cuando el sensor arroja un error inesperado.
-- Comprueba el estado del sensor de movimiento una vez por segundo.
+- [x] Tells the recorder to stop recording when the sensor detects no motion.
+- [x] Tells the recorder to start recording when the sensor detects motion.
+- [x] Tells the recorder to stop recording when the sensor throws an unexpected error.
+- [ ] Checks the motion sensor status once per second.
