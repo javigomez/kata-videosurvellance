@@ -1,5 +1,7 @@
 Video Surveillance Kata in Typescript
 
+note (spanish): si te gusta este repo te recomiendo hacer el curso https://testingsostenible.com
+
 # Enunciado:
 
  a well-known manufacturer of video surveillance systems has asked us to develop software for the prototype of a new innovative product they are developing. It is a device that has a motion sensor and a recorder. The motion sensor has an API with a single method that returns true when it detects that something has started to move and false when it detects no movement. On the other hand, the recorder has two commands: one to start recording and one to stop recording.
